@@ -129,33 +129,31 @@ public class BeaconController2 extends BeaconController {
     public Map<Vector, ItemStack> getStructure() {
         final Map<Vector, ItemStack> structure = new HashMap<>();
 
-        structure.put(new Vector(0, -1, 0), BEACON_POWER_SUPPLY_2);
+        structure.put(new Vector(0, -1, 0), BEACON_POWER_SUPPLY_2.item());
 
-        structure.put(new Vector(0, 1, 0), BEACON_BATTERY_2);
-        structure.put(new Vector(1, 1, 0), BEACON_TRANSMITTER);
-        structure.put(new Vector(-1, 1, 0), BEACON_TRANSMITTER);
-        structure.put(new Vector(0, 1, 1), BEACON_TRANSMITTER);
-        structure.put(new Vector(0, 1, -1), BEACON_TRANSMITTER);
+        structure.put(new Vector(0, 1, 0), BEACON_BATTERY_2.item());
+        structure.put(new Vector(1, 1, 0), BEACON_TRANSMITTER.item());
+        structure.put(new Vector(-1, 1, 0), BEACON_TRANSMITTER.item());
+        structure.put(new Vector(0, 1, 1), BEACON_TRANSMITTER.item());
+        structure.put(new Vector(0, 1, -1), BEACON_TRANSMITTER.item());
 
-        structure.put(new Vector(0, 2, 0), BEACON_BEAM);
+        structure.put(new Vector(0, 2, 0), BEACON_BEAM.item());
 
-        structure.put(new Vector(0, 3, 0), BEACON_MATRIX);
-        structure.put(new Vector(1, 3, 0), BEACON_ROD);
-        structure.put(new Vector(-1, 3, 0), BEACON_ROD);
-        structure.put(new Vector(0, 3, 1), BEACON_ROD);
-        structure.put(new Vector(0, 3, -1), BEACON_ROD);
+        structure.put(new Vector(0, 3, 0), BEACON_MATRIX.item());
+        structure.put(new Vector(1, 3, 0), BEACON_ROD.item());
+        structure.put(new Vector(-1, 3, 0), BEACON_ROD.item());
+        structure.put(new Vector(0, 3, 1), BEACON_ROD.item());
+        structure.put(new Vector(0, 3, -1), BEACON_ROD.item());
+        structure.put(new Vector(0, 4, 0), BEACON_BEAM.item());
+        structure.put(new Vector(1, 4, 0), BEACON_TRANSMITTER.item());
+        structure.put(new Vector(-1, 4, 0), BEACON_TRANSMITTER.item());
+        structure.put(new Vector(0, 4, 1), BEACON_TRANSMITTER.item());
+        structure.put(new Vector(0, 4, -1), BEACON_TRANSMITTER.item());
 
-        structure.put(new Vector(0, 4, 0), BEACON_BEAM);
-        structure.put(new Vector(1, 4, 0), BEACON_TRANSMITTER);
-        structure.put(new Vector(-1, 4, 0), BEACON_TRANSMITTER);
-        structure.put(new Vector(0, 4, 1), BEACON_TRANSMITTER);
-        structure.put(new Vector(0, 4, -1), BEACON_TRANSMITTER);
+        structure.put(new Vector(0, 5, 0), BEACON_BEAM.item());
 
-        structure.put(new Vector(0, 5, 0), BEACON_BEAM);
-
-        structure.put(new Vector(0, 6, 0), BEACON_ROD);
-
-        structure.put(new Vector(0, 7, 0), BEACON_TRANSMITTER);
+        structure.put(new Vector(0, 6, 0), BEACON_ROD.item());
+        structure.put(new Vector(0, 7, 0), BEACON_TRANSMITTER.item());
 
         return structure;
     }

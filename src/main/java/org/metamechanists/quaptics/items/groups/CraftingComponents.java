@@ -108,7 +108,7 @@ public class CraftingComponents {
             "QP_PHASE_CRYSTAL_180", Material.QUARTZ, "&7Phase Crystal", Lore.phaseChange(180)));
 
     private @NotNull SlimefunItemStack enchant(final @NotNull SlimefunItemStack itemStack) {
-        itemStack.addUnsafeEnchantment(Enchantment.ARROW_DAMAGE, 1);
+        itemStack.addUnsafeEnchantment(Enchantment.POWER, 1);
         itemStack.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         return itemStack;
     }
@@ -116,6 +116,7 @@ public class CraftingComponents {
     public void initialize() {
         final SlimefunAddon addon = Quaptics.getInstance();
 
+        // --- TRANSMITTERS ---
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, TRANSMITTER_1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, new ItemStack(Material.REDSTONE), null,
                 new ItemStack(Material.REDSTONE), new ItemStack(Material.GLASS_PANE), new ItemStack(Material.REDSTONE),
@@ -124,24 +125,24 @@ public class CraftingComponents {
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, TRANSMITTER_2, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, new ItemStack(Material.REDSTONE_BLOCK), null,
-                new ItemStack(Material.REDSTONE_BLOCK), TRANSMITTER_1, new ItemStack(Material.REDSTONE_BLOCK),
+                new ItemStack(Material.REDSTONE_BLOCK), TRANSMITTER_1.item(), new ItemStack(Material.REDSTONE_BLOCK),
                 null, new ItemStack(Material.REDSTONE_BLOCK), null
         }).register(addon);
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, TRANSMITTER_3, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, CORINTHIAN_BRONZE_INGOT, null,
-                CORINTHIAN_BRONZE_INGOT, TRANSMITTER_2, CORINTHIAN_BRONZE_INGOT,
-                null, CORINTHIAN_BRONZE_INGOT, null
+                null, CORINTHIAN_BRONZE_INGOT.item(), null,
+                CORINTHIAN_BRONZE_INGOT.item(), TRANSMITTER_2.item(), CORINTHIAN_BRONZE_INGOT.item(),
+                null, CORINTHIAN_BRONZE_INGOT.item(), null
         }).register(addon);
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, TRANSMITTER_4, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, REDSTONE_ALLOY, null,
-                REDSTONE_ALLOY, TRANSMITTER_3, REDSTONE_ALLOY,
-                null, REDSTONE_ALLOY, null
+                null, REDSTONE_ALLOY.item(), null,
+                REDSTONE_ALLOY.item(), TRANSMITTER_3.item(), REDSTONE_ALLOY.item(),
+                null, REDSTONE_ALLOY.item(), null
         }).register(addon);
 
 
-
+        // --- RECEIVERS ---
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, RECEIVER_1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, new ItemStack(Material.COAL), null,
                 new ItemStack(Material.COAL), new ItemStack(Material.GLASS_PANE), new ItemStack(Material.COAL),
@@ -150,24 +151,24 @@ public class CraftingComponents {
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, RECEIVER_2, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, new ItemStack(Material.COAL_BLOCK), null,
-                new ItemStack(Material.COAL_BLOCK), RECEIVER_1, new ItemStack(Material.COAL_BLOCK),
+                new ItemStack(Material.COAL_BLOCK), RECEIVER_1.item(), new ItemStack(Material.COAL_BLOCK),
                 null, new ItemStack(Material.COAL_BLOCK), null
         }).register(addon);
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, RECEIVER_3, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, CORINTHIAN_BRONZE_INGOT, null,
-                CORINTHIAN_BRONZE_INGOT, RECEIVER_2, CORINTHIAN_BRONZE_INGOT,
-                null, CORINTHIAN_BRONZE_INGOT, null
+                null, CORINTHIAN_BRONZE_INGOT.item(), null,
+                CORINTHIAN_BRONZE_INGOT.item(), RECEIVER_2.item(), CORINTHIAN_BRONZE_INGOT.item(),
+                null, CORINTHIAN_BRONZE_INGOT.item(), null
         }).register(addon);
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, RECEIVER_4, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, REDSTONE_ALLOY, null,
-                REDSTONE_ALLOY, RECEIVER_3, REDSTONE_ALLOY,
-                null, REDSTONE_ALLOY, null
+                null, REDSTONE_ALLOY.item(), null,
+                REDSTONE_ALLOY.item(), RECEIVER_3.item(), REDSTONE_ALLOY.item(),
+                null, REDSTONE_ALLOY.item(), null
         }).register(addon);
 
 
-
+        // --- TRANSCEIVERS ---
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, TRANSCEIVER_1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, new ItemStack(Material.COPPER_INGOT), null,
                 new ItemStack(Material.GLASS_PANE), new ItemStack(Material.GLASS_PANE), new ItemStack(Material.GLASS_PANE),
@@ -181,65 +182,65 @@ public class CraftingComponents {
         }).register(addon);
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, TRANSCEIVER_3, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, DAMASCUS_STEEL_INGOT, null,
+                null, DAMASCUS_STEEL_INGOT.item(), null,
                 new ItemStack(Material.GLASS_PANE), new ItemStack(Material.GLASS_PANE), new ItemStack(Material.GLASS_PANE),
-                null, DAMASCUS_STEEL_INGOT, null
+                null, DAMASCUS_STEEL_INGOT.item(), null
         }).register(addon);
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, TRANSCEIVER_4, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, REINFORCED_ALLOY_INGOT, null,
+                null, REINFORCED_ALLOY_INGOT.item(), null,
                 new ItemStack(Material.GLASS_PANE), new ItemStack(Material.GLASS_PANE), new ItemStack(Material.GLASS_PANE),
-                null, REINFORCED_ALLOY_INGOT, null
+                null, REINFORCED_ALLOY_INGOT.item(), null
         }).register(addon);
 
 
-
+        // --- DIELECTRICS ---
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, DIELECTRIC_1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, ZINC_DUST, null,
-                ZINC_DUST, new ItemStack(Material.QUARTZ_BLOCK), ZINC_DUST,
-                null, ZINC_DUST, null
+                null, ZINC_DUST.item(), null,
+                ZINC_DUST.item(), new ItemStack(Material.QUARTZ_BLOCK), ZINC_DUST.item(),
+                null, ZINC_DUST.item(), null
         }).register(addon);
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, DIELECTRIC_2, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, null, null,
-                DIELECTRIC_1, SYNTHETIC_EMERALD, DIELECTRIC_1,
+                DIELECTRIC_1.item(), SYNTHETIC_EMERALD.item(), DIELECTRIC_1.item(),
                 null, null, null
         }).register(addon);
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, DIELECTRIC_3, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, null, null,
-                DIELECTRIC_2, URANIUM, DIELECTRIC_2,
+                DIELECTRIC_2.item(), URANIUM.item(), DIELECTRIC_2.item(),
                 null, null, null
         }).register(addon);
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, DIELECTRIC_4, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, null, null,
-                DIELECTRIC_3, BLISTERING_INGOT_3, DIELECTRIC_3,
+                DIELECTRIC_3.item(), BLISTERING_INGOT_3.item(), DIELECTRIC_3.item(),
                 null, null, null
         }).register(addon);
 
 
-
+        // --- COILS ---
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, TRANSFORMER_COIL_1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                new ItemStack(Material.TERRACOTTA), GOLD_24K, new ItemStack(Material.TERRACOTTA),
+                new ItemStack(Material.TERRACOTTA), GOLD_24K.item(), new ItemStack(Material.TERRACOTTA),
                 new ItemStack(Material.TERRACOTTA), null, new ItemStack(Material.TERRACOTTA),
                 new ItemStack(Material.TERRACOTTA), new ItemStack(Material.TERRACOTTA), new ItemStack(Material.TERRACOTTA)
         }).register(addon);
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, TRANSFORMER_COIL_2, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                new ItemStack(Material.TERRACOTTA), SYNTHETIC_EMERALD, new ItemStack(Material.TERRACOTTA),
-                new ItemStack(Material.TERRACOTTA), TRANSFORMER_COIL_1, new ItemStack(Material.TERRACOTTA),
-                new ItemStack(Material.TERRACOTTA), SYNTHETIC_EMERALD, new ItemStack(Material.TERRACOTTA)
+                new ItemStack(Material.TERRACOTTA), SYNTHETIC_EMERALD.item(), new ItemStack(Material.TERRACOTTA),
+                new ItemStack(Material.TERRACOTTA), TRANSFORMER_COIL_1.item(), new ItemStack(Material.TERRACOTTA),
+                new ItemStack(Material.TERRACOTTA), SYNTHETIC_EMERALD.item(), new ItemStack(Material.TERRACOTTA)
         }).register(addon);
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, TRANSFORMER_COIL_3, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                new ItemStack(Material.TERRACOTTA), CARBONADO, new ItemStack(Material.TERRACOTTA),
-                new ItemStack(Material.TERRACOTTA), TRANSFORMER_COIL_2, new ItemStack(Material.TERRACOTTA),
+                new ItemStack(Material.TERRACOTTA), CARBONADO.item(), new ItemStack(Material.TERRACOTTA),
+                new ItemStack(Material.TERRACOTTA), TRANSFORMER_COIL_2.item(), new ItemStack(Material.TERRACOTTA),
                 new ItemStack(Material.TERRACOTTA), new ItemStack(Material.TERRACOTTA), new ItemStack(Material.TERRACOTTA)
         }).register(addon);
 
 
-
+        // --- ENERGY ELEMENTS ---
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, ENERGY_CONCENTRATION_ELEMENT_1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 new ItemStack(Material.GLASS_PANE), new ItemStack(Material.GLASS_PANE), new ItemStack(Material.GLASS_PANE),
                 new ItemStack(Material.GLASS_PANE), new ItemStack(Material.COAL_BLOCK), new ItemStack(Material.GLASS_PANE),
@@ -247,19 +248,19 @@ public class CraftingComponents {
         }).register(addon);
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, ENERGY_CONCENTRATION_ELEMENT_2, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                SYNTHETIC_SAPPHIRE, SYNTHETIC_SAPPHIRE, SYNTHETIC_SAPPHIRE,
-                ENERGY_CONCENTRATION_ELEMENT_1, new ItemStack(Material.DIAMOND_BLOCK), ENERGY_CONCENTRATION_ELEMENT_1,
-                SYNTHETIC_SAPPHIRE, SYNTHETIC_SAPPHIRE, SYNTHETIC_SAPPHIRE
+                SYNTHETIC_SAPPHIRE.item(), SYNTHETIC_SAPPHIRE.item(), SYNTHETIC_SAPPHIRE.item(),
+                ENERGY_CONCENTRATION_ELEMENT_1.item(), new ItemStack(Material.DIAMOND_BLOCK), ENERGY_CONCENTRATION_ELEMENT_1.item(),
+                SYNTHETIC_SAPPHIRE.item(), SYNTHETIC_SAPPHIRE.item(), SYNTHETIC_SAPPHIRE.item()
         }).register(addon);
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, ENERGY_CONCENTRATION_ELEMENT_3, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                HARDENED_METAL_INGOT, HARDENED_METAL_INGOT, HARDENED_METAL_INGOT,
-                ENERGY_CONCENTRATION_ELEMENT_2, POWER_CRYSTAL, ENERGY_CONCENTRATION_ELEMENT_2,
-                HARDENED_METAL_INGOT, HARDENED_METAL_INGOT, HARDENED_METAL_INGOT
+                HARDENED_METAL_INGOT.item(), HARDENED_METAL_INGOT.item(), HARDENED_METAL_INGOT.item(),
+                ENERGY_CONCENTRATION_ELEMENT_2.item(), POWER_CRYSTAL.item(), ENERGY_CONCENTRATION_ELEMENT_2.item(),
+                HARDENED_METAL_INGOT.item(), HARDENED_METAL_INGOT.item(), HARDENED_METAL_INGOT.item()
         }).register(addon);
 
 
-
+        // --- TURRET COMPONENTS ---
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, TURRET_BASE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, null, null,
                 null, null, null,
@@ -268,46 +269,44 @@ public class CraftingComponents {
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, TURRET_BARREL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, null, null,
-                ALUMINUM_INGOT, ALUMINUM_INGOT, ALUMINUM_INGOT,
+                ALUMINUM_INGOT.item(), ALUMINUM_INGOT.item(), ALUMINUM_INGOT.item(),
                 null, null, null,
         }).register(addon);
 
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, TURRET_TARGETING_MECHANISM, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, null, null,
-                new ItemStack(Material.GLASS), TRANSCEIVER_1, new ItemStack(Material.GLASS),
-                SYNTHETIC_SAPPHIRE, BASIC_CIRCUIT_BOARD, SYNTHETIC_SAPPHIRE,
+                new ItemStack(Material.GLASS), TRANSCEIVER_1.item(), new ItemStack(Material.GLASS),
+                SYNTHETIC_SAPPHIRE.item(), BASIC_CIRCUIT_BOARD.item(), SYNTHETIC_SAPPHIRE.item(),
         }).register(addon);
 
 
-
+        // --- STRUCTURES & CARDS ---
         new UnplaceableBlock(Groups.CRAFTING_COMPONENTS, CARBON_STRUCTURE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, CARBON, null,
-                CARBON, REDSTONE_ALLOY, CARBON,
-                null, CARBON, null
+                null, CARBON.item(), null,
+                CARBON.item(), REDSTONE_ALLOY.item(), CARBON.item(),
+                null, CARBON.item(), null
         }).register(addon);
-
-
 
         new SlimefunItem(Groups.CRAFTING_COMPONENTS, BLANK_MODULE_CARD, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                new ItemStack(Material.COPPER_BLOCK), TRANSCEIVER_3, new ItemStack(Material.COPPER_BLOCK),
-                TRANSCEIVER_3, ENERGY_CONCENTRATION_ELEMENT_3, TRANSCEIVER_3,
-                new ItemStack(Material.COPPER_BLOCK), TRANSCEIVER_3, new ItemStack(Material.COPPER_BLOCK)
+                new ItemStack(Material.COPPER_BLOCK), TRANSCEIVER_3.item(), new ItemStack(Material.COPPER_BLOCK),
+                TRANSCEIVER_3.item(), ENERGY_CONCENTRATION_ELEMENT_3.item(), TRANSCEIVER_3.item(),
+                new ItemStack(Material.COPPER_BLOCK), TRANSCEIVER_3.item(), new ItemStack(Material.COPPER_BLOCK)
         }).register(addon);
 
         new SlimefunItem(Groups.CRAFTING_COMPONENTS, INFUSED_MODULE_CARD, RecipeTypes.RECIPE_INFUSION, new ItemStack[]{
                 null, null, null,
-                null, BLANK_MODULE_CARD, null,
+                null, BLANK_MODULE_CARD.item(), null,
                 null, null, null
         }).register(addon);
 
         new SlimefunItem(Groups.CRAFTING_COMPONENTS, ENTANGLED_MODULE_CARD, RecipeTypes.RECIPE_ENTANGLEMENT, new ItemStack[]{
                 null, null, null,
-                null, INFUSED_MODULE_CARD, null,
+                null, INFUSED_MODULE_CARD.item(), null,
                 null, null, null
         }).register(addon);
 
 
-
+        // --- CRYSTALS ---
         new SlimefunItem(Groups.CRAFTING_COMPONENTS, INFUSED_FREQUENCY_CRYSTAL, RecipeTypes.RECIPE_INFUSION, new ItemStack[]{
                 null, null, null,
                 null, new ItemStack(Material.QUARTZ), null,
@@ -316,11 +315,9 @@ public class CraftingComponents {
 
         new SlimefunItem(Groups.CRAFTING_COMPONENTS, ENTANGLED_FREQUENCY_CRYSTAL, RecipeTypes.RECIPE_ENTANGLEMENT, new ItemStack[]{
                 null, null, null,
-                null, INFUSED_FREQUENCY_CRYSTAL, null,
+                null, INFUSED_FREQUENCY_CRYSTAL.item(), null,
                 null, null, null
         }).register(addon);
-
-
 
         new SlimefunItem(Groups.CRAFTING_COMPONENTS, PHASE_CRYSTAL_1, RecipeTypes.RECIPE_REFINING, new ItemStack[]{
                 null, null, null,
@@ -330,31 +327,31 @@ public class CraftingComponents {
 
         new SlimefunItem(Groups.CRAFTING_COMPONENTS, PHASE_CRYSTAL_5, RecipeTypes.RECIPE_REFINING, new ItemStack[]{
                 null, null, null,
-                null, PHASE_CRYSTAL_1, null,
+                null, PHASE_CRYSTAL_1.item(), null,
                 null, null, null
         }).register(addon);
 
         new SlimefunItem(Groups.CRAFTING_COMPONENTS, PHASE_CRYSTAL_15, RecipeTypes.RECIPE_REFINING, new ItemStack[]{
                 null, null, null,
-                null, PHASE_CRYSTAL_5, null,
+                null, PHASE_CRYSTAL_5.item(), null,
                 null, null, null
         }).register(addon);
 
         new SlimefunItem(Groups.CRAFTING_COMPONENTS, PHASE_CRYSTAL_45, RecipeTypes.RECIPE_REFINING, new ItemStack[]{
                 null, null, null,
-                null, PHASE_CRYSTAL_15, null,
+                null, PHASE_CRYSTAL_15.item(), null,
                 null, null, null
         }).register(addon);
 
         new SlimefunItem(Groups.CRAFTING_COMPONENTS, PHASE_CRYSTAL_90, RecipeTypes.RECIPE_REFINING, new ItemStack[]{
                 null, null, null,
-                null, PHASE_CRYSTAL_45, null,
+                null, PHASE_CRYSTAL_45.item(), null,
                 null, null, null
         }).register(addon);
 
         new SlimefunItem(Groups.CRAFTING_COMPONENTS, PHASE_CRYSTAL_180, RecipeTypes.RECIPE_REFINING, new ItemStack[]{
                 null, null, null,
-                null, PHASE_CRYSTAL_90, null,
+                null, PHASE_CRYSTAL_90.item(), null,
                 null, null, null
         }).register(addon);
     }

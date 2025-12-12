@@ -41,7 +41,7 @@ public class Tools {
         }).register(addon);
 
         new MultiblockWand(Groups.TOOLS, MULTIBLOCK_WAND, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, null, HOLOGRAM_PROJECTOR,
+                null, null, HOLOGRAM_PROJECTOR.item(),
                 null, new ItemStack(Material.STICK), null,
                 new ItemStack(Material.STICK), null, null
         }).register(addon);
@@ -50,26 +50,26 @@ public class Tools {
 
         new ModulatedRayGun(Groups.TOOLS, RAY_GUN_1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, null, null,
-                ENERGY_CONCENTRATION_ELEMENT_1, new ItemStack(Material.IRON_INGOT), TRANSCEIVER_1,
+                ENERGY_CONCENTRATION_ELEMENT_1.item(), new ItemStack(Material.IRON_INGOT), TRANSCEIVER_1.item(),
                 new ItemStack(Material.IRON_INGOT), new ItemStack(Material.IRON_INGOT), null
         }, RAY_GUN_1_SETTINGS).register(addon);
 
         new ModulatedRayGun(Groups.TOOLS, RAY_GUN_2, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, null, null,
-                ENERGY_CONCENTRATION_ELEMENT_2, RAY_GUN_1, TRANSCEIVER_2,
-                DIELECTRIC_1, BILLON_INGOT, null
+                ENERGY_CONCENTRATION_ELEMENT_2.item(), RAY_GUN_1.item(), TRANSCEIVER_2.item(),
+                DIELECTRIC_1.item(), BILLON_INGOT.item(), null
         }, RAY_GUN_2_SETTINGS).register(addon);
 
         new DirectRayGun(Groups.TOOLS, RAY_GUN_3, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, null, null,
-                ENERGY_CONCENTRATION_ELEMENT_3, RAY_GUN_2, TRANSCEIVER_3,
-                DIELECTRIC_2, HARDENED_METAL_INGOT, null
+                ENERGY_CONCENTRATION_ELEMENT_3.item(), RAY_GUN_2.item(), TRANSCEIVER_3.item(),
+                DIELECTRIC_2.item(), HARDENED_METAL_INGOT.item(), null
         }, RAY_GUN_3_SETTINGS).register(addon);
 
         new DirectRayGun(Groups.TOOLS, RAY_GUN_4, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, null, null,
-                ENERGY_CONCENTRATION_ELEMENT_3, RAY_GUN_3, TRANSCEIVER_4,
-                DIELECTRIC_4, POWER_CRYSTAL, null
+                ENERGY_CONCENTRATION_ELEMENT_3.item(), RAY_GUN_3.item(), TRANSCEIVER_4.item(),
+                DIELECTRIC_4.item(), POWER_CRYSTAL.item(), null
         }, RAY_GUN_4_SETTINGS).register(addon);
     }
 }

@@ -40,54 +40,54 @@ public class BeamCreation {
 
         new SolarConcentrator(Groups.BEAM_CREATION, SOLAR_CONCENTRATOR_1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS),
-                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_1, TRANSMITTER_1,
+                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_1.item(), TRANSMITTER_1.item(),
                 new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS)
         }, SOLAR_CONCENTRATOR_1_SETTINGS).register(addon);
 
         new SolarConcentrator(Groups.BEAM_CREATION, SOLAR_CONCENTRATOR_2, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS),
-                ENERGY_CONCENTRATION_ELEMENT_1, SOLAR_CONCENTRATOR_1, TRANSMITTER_1,
+                ENERGY_CONCENTRATION_ELEMENT_1.item(), SOLAR_CONCENTRATOR_1.item(), TRANSMITTER_1.item(),
                 new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS)
         }, SOLAR_CONCENTRATOR_2_SETTINGS).register(addon);
 
 
 
         new EnergyConcentrator(Groups.BEAM_CREATION, ENERGY_CONCENTRATOR_1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_2, new ItemStack(Material.GLASS),
-                new ItemStack(Material.GLASS), SOLAR_CONCENTRATOR_2, TRANSMITTER_2,
-                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_2, new ItemStack(Material.GLASS)
+                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_2.item(), new ItemStack(Material.GLASS),
+                new ItemStack(Material.GLASS), SOLAR_CONCENTRATOR_2.item(), TRANSMITTER_2.item(),
+                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_2.item(), new ItemStack(Material.GLASS)
         }, ENERGY_CONCENTRATOR_1_SETTINGS).register(addon);
 
         new EnergyConcentrator(Groups.BEAM_CREATION, ENERGY_CONCENTRATOR_2, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_2, new ItemStack(Material.GLASS),
-                ENERGY_CONCENTRATION_ELEMENT_2, ENERGY_CONCENTRATOR_1, TRANSMITTER_2,
-                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_2, new ItemStack(Material.GLASS)
+                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_2.item(), new ItemStack(Material.GLASS),
+                ENERGY_CONCENTRATION_ELEMENT_2.item(), ENERGY_CONCENTRATOR_1.item(), TRANSMITTER_2.item(),
+                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_2.item(), new ItemStack(Material.GLASS)
         }, ENERGY_CONCENTRATOR_2_SETTINGS).register(addon);
 
         new EnergyConcentrator(Groups.BEAM_CREATION, ENERGY_CONCENTRATOR_3, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_3, new ItemStack(Material.GLASS),
-                new ItemStack(Material.GLASS), ENERGY_CONCENTRATOR_2, TRANSMITTER_3,
-                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_3, new ItemStack(Material.GLASS)
+                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_3.item(), new ItemStack(Material.GLASS),
+                new ItemStack(Material.GLASS), ENERGY_CONCENTRATOR_2.item(), TRANSMITTER_3.item(),
+                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_3.item(), new ItemStack(Material.GLASS)
         }, ENERGY_CONCENTRATOR_3_SETTINGS).register(addon);
 
         new EnergyConcentrator(Groups.BEAM_CREATION, ENERGY_CONCENTRATOR_4, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_3, new ItemStack(Material.GLASS),
-                ENERGY_CONCENTRATION_ELEMENT_3, ENERGY_CONCENTRATOR_3, TRANSMITTER_3,
-                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_3, new ItemStack(Material.GLASS)
+                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_3.item(), new ItemStack(Material.GLASS),
+                ENERGY_CONCENTRATION_ELEMENT_3.item(), ENERGY_CONCENTRATOR_3.item(), TRANSMITTER_3.item(),
+                new ItemStack(Material.GLASS), ENERGY_CONCENTRATION_ELEMENT_3.item(), new ItemStack(Material.GLASS)
         }, ENERGY_CONCENTRATOR_4_SETTINGS).register(addon);
 
 
 
         new ReactorRing(Groups.BEAM_CREATION, REACTOR_RING, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                ELECTRO_MAGNET, DIELECTRIC_4, ELECTRO_MAGNET,
-                ELECTRO_MAGNET, TRANSFORMER_COIL_3, ELECTRO_MAGNET,
-                ELECTRO_MAGNET, DIELECTRIC_4, ELECTRO_MAGNET
+                ELECTRO_MAGNET.item(), DIELECTRIC_4.item(), ELECTRO_MAGNET.item(),
+                ELECTRO_MAGNET.item(), TRANSFORMER_COIL_3.item(), ELECTRO_MAGNET.item(),
+                ELECTRO_MAGNET.item(), DIELECTRIC_4.item(), ELECTRO_MAGNET.item()
         }, REACTOR_RING_SETTINGS).register(addon);
 
         new ReactorController(Groups.BEAM_CREATION, REACTOR_CONTROLLER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, BEACON_MATRIX, null,
-                BEACON_MATRIX, NETHER_STAR_REACTOR, BEACON_MATRIX,
-                null, BEACON_MATRIX, null
+                null, BEACON_MATRIX.item(), null,
+                BEACON_MATRIX.item(), NETHER_STAR_REACTOR.item(), BEACON_MATRIX.item(),
+                null, BEACON_MATRIX.item(), null
         }, REACTOR_CONTROLLER_SETTINGS).register(addon);
     }
 }

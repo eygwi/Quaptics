@@ -47,14 +47,14 @@ public class IndustrialInfusionContainer extends InfusionContainer {
                     "&7● &eRight Click &7with an item to start infusing"));
 
     private static final Map<Vector, ItemStack> PILLARS = Map.of(
-            new Vector(3, 0, 0), INDUSTRIAL_INFUSION_PILLAR,
-            new Vector(2, 0, 2), INDUSTRIAL_INFUSION_PILLAR,
-            new Vector(0, 0, 3), INDUSTRIAL_INFUSION_PILLAR,
-            new Vector(-2, 0, 2), INDUSTRIAL_INFUSION_PILLAR,
-            new Vector(-3, 0, 0), INDUSTRIAL_INFUSION_PILLAR,
-            new Vector(-2, 0, -2), INDUSTRIAL_INFUSION_PILLAR,
-            new Vector(0, 0, -3), INDUSTRIAL_INFUSION_PILLAR,
-            new Vector(2, 0, -2), INDUSTRIAL_INFUSION_PILLAR);
+            new Vector(3, 0, 0), INDUSTRIAL_INFUSION_PILLAR.item(),
+            new Vector(2, 0, 2), INDUSTRIAL_INFUSION_PILLAR.item(),
+            new Vector(0, 0, 3), INDUSTRIAL_INFUSION_PILLAR.item(),
+            new Vector(-2, 0, 2), INDUSTRIAL_INFUSION_PILLAR.item(),
+            new Vector(-3, 0, 0), INDUSTRIAL_INFUSION_PILLAR.item(),
+            new Vector(-2, 0, -2), INDUSTRIAL_INFUSION_PILLAR.item(),
+            new Vector(0, 0, -3), INDUSTRIAL_INFUSION_PILLAR.item(),
+            new Vector(2, 0, -2), INDUSTRIAL_INFUSION_PILLAR.item());
 
     public IndustrialInfusionContainer(final ItemGroup itemGroup, final SlimefunItemStack item, final RecipeType recipeType, final ItemStack[] recipe, final Settings settings) {
         super(itemGroup, item, recipeType, recipe, settings);

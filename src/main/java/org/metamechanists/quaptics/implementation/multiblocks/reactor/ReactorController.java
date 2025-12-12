@@ -203,14 +203,14 @@ public class ReactorController extends ConnectedBlock implements ComplexMultiblo
     @Override
     public Map<Vector, ItemStack> getStructure() {
         return Map.of(
-                RING_1_LOCATION, REACTOR_RING,
-                RING_2_LOCATION, REACTOR_RING,
-                RING_3_LOCATION, REACTOR_RING,
-                RING_4_LOCATION, REACTOR_RING,
-                RING_5_LOCATION, REACTOR_RING,
-                RING_6_LOCATION, REACTOR_RING,
-                RING_7_LOCATION, REACTOR_RING,
-                RING_8_LOCATION, REACTOR_RING
+                RING_1_LOCATION, REACTOR_RING.item(),
+                RING_2_LOCATION, REACTOR_RING.item(),
+                RING_3_LOCATION, REACTOR_RING.item(),
+                RING_4_LOCATION, REACTOR_RING.item(),
+                RING_5_LOCATION, REACTOR_RING.item(),
+                RING_6_LOCATION, REACTOR_RING.item(),
+                RING_7_LOCATION, REACTOR_RING.item(),
+                RING_8_LOCATION, REACTOR_RING.item()
         );
     }
     @Override

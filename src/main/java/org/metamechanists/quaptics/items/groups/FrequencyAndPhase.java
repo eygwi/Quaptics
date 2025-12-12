@@ -47,70 +47,70 @@ public class FrequencyAndPhase {
 
         new Repeater(Groups.FREQUENCY_AND_PHASE, REPEATER_1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS),
-                RECEIVER_2, new ItemStack(Material.REPEATER), TRANSMITTER_2,
-                FERROSILICON, new ItemStack(Material.REDSTONE_BLOCK), FERROSILICON
+                RECEIVER_2.item(), new ItemStack(Material.REPEATER), TRANSMITTER_2.item(),
+                FERROSILICON.item(), new ItemStack(Material.REDSTONE_BLOCK), FERROSILICON.item()
         }, REPEATER_1_SETTINGS).register(addon);
 
         new Repeater(Groups.FREQUENCY_AND_PHASE, REPEATER_2, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS),
-                RECEIVER_3, REPEATER_1, TRANSMITTER_3,
-                HARDENED_METAL_INGOT, INFUSED_FREQUENCY_CRYSTAL, HARDENED_METAL_INGOT
+                RECEIVER_3.item(), REPEATER_1.item(), TRANSMITTER_3.item(),
+                HARDENED_METAL_INGOT.item(), INFUSED_FREQUENCY_CRYSTAL.item(), HARDENED_METAL_INGOT.item()
         }, REPEATER_2_SETTINGS).register(addon);
 
         new Repeater(Groups.FREQUENCY_AND_PHASE, REPEATER_3, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS),
-                RECEIVER_4, REPEATER_2, TRANSMITTER_4,
-                URANIUM, ENTANGLED_FREQUENCY_CRYSTAL, URANIUM
+                RECEIVER_4.item(), REPEATER_2.item(), TRANSMITTER_4.item(),
+                URANIUM.item(), ENTANGLED_FREQUENCY_CRYSTAL.item(), URANIUM.item()
         }, REPEATER_3_SETTINGS).register(addon);
 
 
 
         new Scatterer(Groups.FREQUENCY_AND_PHASE, SCATTERER_1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS),
-                RECEIVER_2, new ItemStack(Material.COMPARATOR), TRANSMITTER_2,
-                FERROSILICON, new ItemStack(Material.REDSTONE_BLOCK), FERROSILICON
+                RECEIVER_2.item(), new ItemStack(Material.COMPARATOR), TRANSMITTER_2.item(),
+                FERROSILICON.item(), new ItemStack(Material.REDSTONE_BLOCK), FERROSILICON.item()
         }, SCATTERER_1_SETTINGS).register(addon);
 
         new Scatterer(Groups.FREQUENCY_AND_PHASE, SCATTERER_2, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS),
-                RECEIVER_3, SCATTERER_1, TRANSMITTER_3,
-                HARDENED_METAL_INGOT, INFUSED_FREQUENCY_CRYSTAL, HARDENED_METAL_INGOT
+                RECEIVER_3.item(), SCATTERER_1.item(), TRANSMITTER_3.item(),
+                HARDENED_METAL_INGOT.item(), INFUSED_FREQUENCY_CRYSTAL.item(), HARDENED_METAL_INGOT.item()
         }, SCATTERER_2_SETTINGS).register(addon);
 
         new Scatterer(Groups.FREQUENCY_AND_PHASE, SCATTERER_3, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS),
-                RECEIVER_4, SCATTERER_2, TRANSMITTER_4,
-                URANIUM, ENTANGLED_FREQUENCY_CRYSTAL, URANIUM
+                RECEIVER_4.item(), SCATTERER_2.item(), TRANSMITTER_4.item(),
+                URANIUM.item(), ENTANGLED_FREQUENCY_CRYSTAL.item(), URANIUM.item()
         }, SCATTERER_3_SETTINGS).register(addon);
 
 
 
         new Polariser(Groups.FREQUENCY_AND_PHASE, POLARISER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                REINFORCED_ALLOY_INGOT, TRANSCEIVER_3, REINFORCED_ALLOY_INGOT,
-                RECEIVER_3, null, TRANSMITTER_3,
-                REINFORCED_ALLOY_INGOT, TRANSCEIVER_3, REINFORCED_ALLOY_INGOT
+                REINFORCED_ALLOY_INGOT.item(), TRANSCEIVER_3.item(), REINFORCED_ALLOY_INGOT.item(),
+                RECEIVER_3.item(), null, TRANSMITTER_3.item(),
+                REINFORCED_ALLOY_INGOT.item(), TRANSCEIVER_3.item(), REINFORCED_ALLOY_INGOT.item()
         }, POLARISER_SETTINGS).register(addon);
 
 
 
         new Interferometer(Groups.FREQUENCY_AND_PHASE, INTERFEROMETER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                REINFORCED_ALLOY_INGOT, POLARISER, REINFORCED_ALLOY_INGOT,
-                RECEIVER_3, POLARISER, TRANSMITTER_3,
-                REINFORCED_ALLOY_INGOT, POLARISER, REINFORCED_ALLOY_INGOT
+                REINFORCED_ALLOY_INGOT.item(), POLARISER.item(), REINFORCED_ALLOY_INGOT.item(),
+                RECEIVER_3.item(), POLARISER.item(), TRANSMITTER_3.item(),
+                REINFORCED_ALLOY_INGOT.item(), POLARISER.item(), REINFORCED_ALLOY_INGOT.item()
         }, INTERFEROMETER_SETTINGS).register(addon);
 
 
 
         new DiffractionGrating(Groups.FREQUENCY_AND_PHASE, DIFFRACTION_GRATING_1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                DIELECTRIC_3, PHASE_CRYSTAL_180, DIELECTRIC_3,
-                RECEIVER_3, POLARISER, TRANSMITTER_3,
-                DIELECTRIC_3, ENTANGLED_FREQUENCY_CRYSTAL, DIELECTRIC_3
+                DIELECTRIC_3.item(), PHASE_CRYSTAL_180.item(), DIELECTRIC_3.item(),
+                RECEIVER_3.item(), POLARISER.item(), TRANSMITTER_3.item(),
+                DIELECTRIC_3.item(), ENTANGLED_FREQUENCY_CRYSTAL.item(), DIELECTRIC_3.item()
         }, DIFFRACTION_GRATING_1_SETTINGS).register(addon);
 
         new DiffractionGrating(Groups.FREQUENCY_AND_PHASE, DIFFRACTION_GRATING_2, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                DIELECTRIC_4, PHASE_CRYSTAL_180, DIELECTRIC_4,
-                RECEIVER_4, DIFFRACTION_GRATING_1, TRANSMITTER_4,
-                DIELECTRIC_4, ENTANGLED_FREQUENCY_CRYSTAL, DIELECTRIC_4
+                DIELECTRIC_4.item(), PHASE_CRYSTAL_180.item(), DIELECTRIC_4.item(),
+                RECEIVER_4.item(), DIFFRACTION_GRATING_1.item(), TRANSMITTER_4.item(),
+                DIELECTRIC_4.item(), ENTANGLED_FREQUENCY_CRYSTAL.item(), DIELECTRIC_4.item()
         }, DIFFRACTION_GRATING_2_SETTINGS).register(addon);
     }
 }

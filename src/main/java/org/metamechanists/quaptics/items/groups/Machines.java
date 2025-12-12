@@ -106,194 +106,194 @@ public class Machines {
     public void initialize() {
         final SlimefunAddon addon = Quaptics.getInstance();
 
+        // --- TURRETS (HOSTILE & PASSIVE) ---
         new ModulatedTurret(Groups.MACHINES, TURRET_1_HOSTILE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, new ItemStack(Material.GUNPOWDER), null,
-                RECEIVER_1, RAY_GUN_1, TURRET_BARREL,
-                TURRET_BASE, TURRET_TARGETING_MECHANISM, TURRET_BASE
+                RECEIVER_1.item(), RAY_GUN_1.item(), TURRET_BARREL.item(),
+                TURRET_BASE.item(), TURRET_TARGETING_MECHANISM.item(), TURRET_BASE.item()
         }, TURRET_1_HOSTILE_SETTINGS).register(addon);
 
         new ModulatedTurret(Groups.MACHINES, TURRET_1_PASSIVE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, new ItemStack(Material.WHEAT), null,
-                RECEIVER_1, RAY_GUN_1, TURRET_BARREL,
-                TURRET_BASE, TURRET_TARGETING_MECHANISM, TURRET_BASE
+                RECEIVER_1.item(), RAY_GUN_1.item(), TURRET_BARREL.item(),
+                TURRET_BASE.item(), TURRET_TARGETING_MECHANISM.item(), TURRET_BASE.item()
         }, TURRET_1_PASSIVE_SETTINGS).register(addon);
 
         new ModulatedTurret(Groups.MACHINES, TURRET_2_HOSTILE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, new ItemStack(Material.GUNPOWDER), null,
-                RECEIVER_2, RAY_GUN_2, TURRET_BARREL,
-                TURRET_BASE, TURRET_TARGETING_MECHANISM, TURRET_BASE
+                RECEIVER_2.item(), RAY_GUN_2.item(), TURRET_BARREL.item(),
+                TURRET_BASE.item(), TURRET_TARGETING_MECHANISM.item(), TURRET_BASE.item()
         }, TURRET_2_HOSTILE_SETTINGS).register(addon);
 
         new ModulatedTurret(Groups.MACHINES, TURRET_2_PASSIVE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, new ItemStack(Material.WHEAT), null,
-                RECEIVER_2, RAY_GUN_2, TURRET_BARREL,
-                TURRET_BASE, TURRET_TARGETING_MECHANISM, TURRET_BASE
+                RECEIVER_2.item(), RAY_GUN_2.item(), TURRET_BARREL.item(),
+                TURRET_BASE.item(), TURRET_TARGETING_MECHANISM.item(), TURRET_BASE.item()
         }, TURRET_2_PASSIVE_SETTINGS).register(addon);
 
         new DirectTurret(Groups.MACHINES, TURRET_3_HOSTILE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, new ItemStack(Material.GUNPOWDER), null,
-                RECEIVER_3, RAY_GUN_3, TURRET_BARREL,
-                TURRET_BASE, TURRET_TARGETING_MECHANISM, TURRET_BASE
+                RECEIVER_3.item(), RAY_GUN_3.item(), TURRET_BARREL.item(),
+                TURRET_BASE.item(), TURRET_TARGETING_MECHANISM.item(), TURRET_BASE.item()
         }, TURRET_3_HOSTILE_SETTINGS).register(addon);
 
         new DirectTurret(Groups.MACHINES, TURRET_3_PASSIVE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, new ItemStack(Material.WHEAT), null,
-                RECEIVER_3, RAY_GUN_3, TURRET_BARREL,
-                TURRET_BASE, TURRET_TARGETING_MECHANISM, TURRET_BASE
+                RECEIVER_3.item(), RAY_GUN_3.item(), TURRET_BARREL.item(),
+                TURRET_BASE.item(), TURRET_TARGETING_MECHANISM.item(), TURRET_BASE.item()
         }, TURRET_3_PASSIVE_SETTINGS).register(addon);
 
         new DirectTurret(Groups.MACHINES, TURRET_4_HOSTILE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, new ItemStack(Material.GUNPOWDER), null,
-                RECEIVER_4, RAY_GUN_4, TURRET_BARREL,
-                TURRET_BASE, TURRET_TARGETING_MECHANISM, TURRET_BASE
+                RECEIVER_4.item(), RAY_GUN_4.item(), TURRET_BARREL.item(),
+                TURRET_BASE.item(), TURRET_TARGETING_MECHANISM.item(), TURRET_BASE.item()
         }, TURRET_4_HOSTILE_SETTINGS).register(addon);
 
         new DirectTurret(Groups.MACHINES, TURRET_4_PASSIVE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, new ItemStack(Material.WHEAT), null,
-                RECEIVER_4, RAY_GUN_4, TURRET_BARREL,
-                TURRET_BASE, TURRET_TARGETING_MECHANISM, TURRET_BASE
+                RECEIVER_4.item(), RAY_GUN_4.item(), TURRET_BARREL.item(),
+                TURRET_BASE.item(), TURRET_TARGETING_MECHANISM.item(), TURRET_BASE.item()
         }, TURRET_4_PASSIVE_SETTINGS).register(addon);
 
 
-
+        // --- CHARGERS ---
         new Charger(Groups.MACHINES, CHARGER_1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                new ItemStack(Material.IRON_INGOT), TRANSCEIVER_1, new ItemStack(Material.IRON_INGOT),
-                RECEIVER_1, null, DIELECTRIC_1,
-                new ItemStack(Material.IRON_INGOT), TRANSCEIVER_1, new ItemStack(Material.IRON_INGOT)
-
+                new ItemStack(Material.IRON_INGOT), TRANSCEIVER_1.item(), new ItemStack(Material.IRON_INGOT),
+                RECEIVER_1.item(), null, DIELECTRIC_1.item(),
+                new ItemStack(Material.IRON_INGOT), TRANSCEIVER_1.item(), new ItemStack(Material.IRON_INGOT)
         }, CHARGER_1_SETTINGS).register(addon);
 
         new Charger(Groups.MACHINES, CHARGER_2, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                DURALUMIN_INGOT, TRANSCEIVER_2, DURALUMIN_INGOT,
-                RECEIVER_2, null, SMALL_CAPACITOR,
-                DURALUMIN_INGOT, TRANSCEIVER_2, DURALUMIN_INGOT
+                DURALUMIN_INGOT.item(), TRANSCEIVER_2.item(), DURALUMIN_INGOT.item(),
+                RECEIVER_2.item(), null, SMALL_CAPACITOR.item(),
+                DURALUMIN_INGOT.item(), TRANSCEIVER_2.item(), DURALUMIN_INGOT.item()
         }, CHARGER_2_SETTINGS).register(addon);
 
         new Charger(Groups.MACHINES, CHARGER_3, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                REDSTONE_ALLOY, TRANSCEIVER_3, REDSTONE_ALLOY,
-                RECEIVER_3, null, BIG_CAPACITOR,
-                REDSTONE_ALLOY, TRANSCEIVER_3, REDSTONE_ALLOY
+                REDSTONE_ALLOY.item(), TRANSCEIVER_3.item(), REDSTONE_ALLOY.item(),
+                RECEIVER_3.item(), null, BIG_CAPACITOR.item(),
+                REDSTONE_ALLOY.item(), TRANSCEIVER_3.item(), REDSTONE_ALLOY.item()
         }, CHARGER_3_SETTINGS).register(addon);
 
         new Charger(Groups.MACHINES, CHARGER_4, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                REINFORCED_ALLOY_INGOT, TRANSCEIVER_4, REINFORCED_ALLOY_INGOT,
-                RECEIVER_4, null, CARBONADO_EDGED_CAPACITOR,
-                REINFORCED_ALLOY_INGOT, TRANSCEIVER_4, REINFORCED_ALLOY_INGOT
+                REINFORCED_ALLOY_INGOT.item(), TRANSCEIVER_4.item(), REINFORCED_ALLOY_INGOT.item(),
+                RECEIVER_4.item(), null, CARBONADO_EDGED_CAPACITOR.item(),
+                REINFORCED_ALLOY_INGOT.item(), TRANSCEIVER_4.item(), REINFORCED_ALLOY_INGOT.item()
         }, CHARGER_4_SETTINGS).register(addon);
 
 
-
+        // --- MULTIBLOCK CLICKERS ---
         new MultiblockClicker(Groups.MACHINES, MULTIBLOCK_CLICKER_1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 new ItemStack(Material.COPPER_BLOCK), new ItemStack(Material.COPPER_BLOCK), new ItemStack(Material.COPPER_BLOCK),
-                RECEIVER_2, ELECTRIC_MOTOR, new ItemStack(Material.DISPENSER),
+                RECEIVER_2.item(), ELECTRIC_MOTOR.item(), new ItemStack(Material.DISPENSER),
                 new ItemStack(Material.COPPER_BLOCK), new ItemStack(Material.COPPER_BLOCK), new ItemStack(Material.COPPER_BLOCK)
         }, MULTIBLOCK_CLICKER_1_SETTINGS).register(addon);
 
         new MultiblockClicker(Groups.MACHINES, MULTIBLOCK_CLICKER_2, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 new ItemStack(Material.COPPER_BLOCK), new ItemStack(Material.COPPER_BLOCK), new ItemStack(Material.COPPER_BLOCK),
-                RECEIVER_2, ELECTRIC_MOTOR, MULTIBLOCK_CLICKER_1,
+                RECEIVER_2.item(), ELECTRIC_MOTOR.item(), MULTIBLOCK_CLICKER_1.item(),
                 new ItemStack(Material.COPPER_BLOCK), new ItemStack(Material.COPPER_BLOCK), new ItemStack(Material.COPPER_BLOCK)
         }, MULTIBLOCK_CLICKER_2_SETTINGS).register(addon);
 
         new MultiblockClicker(Groups.MACHINES, MULTIBLOCK_CLICKER_3, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                HARDENED_METAL_INGOT, new ItemStack(Material.COPPER_BLOCK), HARDENED_METAL_INGOT,
-                RECEIVER_3, ELECTRIC_MOTOR, MULTIBLOCK_CLICKER_2,
-                HARDENED_METAL_INGOT, new ItemStack(Material.COPPER_BLOCK), HARDENED_METAL_INGOT
+                HARDENED_METAL_INGOT.item(), new ItemStack(Material.COPPER_BLOCK), HARDENED_METAL_INGOT.item(),
+                RECEIVER_3.item(), ELECTRIC_MOTOR.item(), MULTIBLOCK_CLICKER_2.item(),
+                HARDENED_METAL_INGOT.item(), new ItemStack(Material.COPPER_BLOCK), HARDENED_METAL_INGOT.item()
         }, MULTIBLOCK_CLICKER_3_SETTINGS).register(addon);
 
 
-
+        // --- DATA STRIPPERS ---
         new DataStripper(Groups.MACHINES, DATA_STRIPPER_1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                new ItemStack(Material.IRON_BLOCK), ELECTRIC_MOTOR, new ItemStack(Material.IRON_BLOCK),
-                RECEIVER_2, null, new ItemStack(Material.IRON_BLOCK),
-                new ItemStack(Material.IRON_BLOCK), ELECTRIC_MOTOR, new ItemStack(Material.IRON_BLOCK)
+                new ItemStack(Material.IRON_BLOCK), ELECTRIC_MOTOR.item(), new ItemStack(Material.IRON_BLOCK),
+                RECEIVER_2.item(), null, new ItemStack(Material.IRON_BLOCK),
+                new ItemStack(Material.IRON_BLOCK), ELECTRIC_MOTOR.item(), new ItemStack(Material.IRON_BLOCK)
         }, DATA_STRIPPER_1_SETTINGS).register(addon);
 
         new DataStripper(Groups.MACHINES, DATA_STRIPPER_2, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                new ItemStack(Material.IRON_BLOCK), ELECTRIC_MOTOR, new ItemStack(Material.IRON_BLOCK),
-                RECEIVER_3, DATA_STRIPPER_1, DIELECTRIC_3,
-                new ItemStack(Material.IRON_BLOCK), ELECTRIC_MOTOR, new ItemStack(Material.IRON_BLOCK)
+                new ItemStack(Material.IRON_BLOCK), ELECTRIC_MOTOR.item(), new ItemStack(Material.IRON_BLOCK),
+                RECEIVER_3.item(), DATA_STRIPPER_1.item(), DIELECTRIC_3.item(),
+                new ItemStack(Material.IRON_BLOCK), ELECTRIC_MOTOR.item(), new ItemStack(Material.IRON_BLOCK)
         }, DATA_STRIPPER_2_SETTINGS).register(addon);
 
 
-
+        // --- LAUNCHPAD ---
         new Launchpad(Groups.MACHINES, LAUNCHPAD, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                ELECTRO_MAGNET, ELECTRO_MAGNET, ELECTRO_MAGNET,
-                RECEIVER_2, new ItemStack(Material.HEAVY_WEIGHTED_PRESSURE_PLATE), TRANSFORMER_COIL_1,
+                ELECTRO_MAGNET.item(), ELECTRO_MAGNET.item(), ELECTRO_MAGNET.item(),
+                RECEIVER_2.item(), new ItemStack(Material.HEAVY_WEIGHTED_PRESSURE_PLATE), TRANSFORMER_COIL_1.item(),
                 new ItemStack(Material.IRON_INGOT), new ItemStack(Material.IRON_INGOT), new ItemStack(Material.IRON_INGOT)
         }, LAUNCHPAD_SETTINGS).register(addon);
 
 
 
         new ItemProjector(Groups.MACHINES, ITEM_PROJECTOR, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, HOLOGRAM_PROJECTOR, null,
-                RECEIVER_3, POWER_CRYSTAL, TRANSCEIVER_3,
-                FERROSILICON, FERROSILICON, FERROSILICON
+                null, HOLOGRAM_PROJECTOR.item(), null,
+                RECEIVER_3.item(), POWER_CRYSTAL.item(), TRANSCEIVER_3.item(),
+                FERROSILICON.item(), FERROSILICON.item(), FERROSILICON.item()
         }, ITEM_PROJECTOR_SETTINGS).register(addon);
 
 
 
         new CrystalRefiner(Groups.MACHINES, CRYSTAL_REFINER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, ELECTRO_MAGNET, null,
-                RECEIVER_2, new ItemStack(Material.WATER_BUCKET), TRANSCEIVER_2,
-                REINFORCED_ALLOY_INGOT, new ItemStack(Material.CAULDRON), REINFORCED_ALLOY_INGOT
+                null, ELECTRO_MAGNET.item(), null,
+                RECEIVER_2.item(), new ItemStack(Material.WATER_BUCKET), TRANSCEIVER_2.item(),
+                REINFORCED_ALLOY_INGOT.item(), new ItemStack(Material.CAULDRON), REINFORCED_ALLOY_INGOT.item()
         }, CRYSTAL_REFINER_SETTINGS).register(addon);
 
         new IndustrialCrystalRefiner(Groups.MACHINES, INDUSTRIAL_CRYSTAL_REFINER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, ELECTRO_MAGNET, null,
-                CRYSTAL_REFINER, new ItemStack(Material.WATER_BUCKET), CRYSTAL_REFINER,
-                DIELECTRIC_3, new ItemStack(Material.CAULDRON), DIELECTRIC_3
+                null, ELECTRO_MAGNET.item(), null,
+                CRYSTAL_REFINER.item(), new ItemStack(Material.WATER_BUCKET), CRYSTAL_REFINER.item(),
+                DIELECTRIC_3.item(), new ItemStack(Material.CAULDRON), DIELECTRIC_3.item()
         }, IndustrialCrystalRefiner.INDUSTRIAL_CRYSTAL_REFINER_SETTINGS).register(addon);
 
 
         new InfusionPillar(Groups.MACHINES, INFUSION_PILLAR, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, TRANSCEIVER_2, null,
-                RECEIVER_2, ELECTRIC_MOTOR, null,
-                null, CARBON_STRUCTURE, null
+                null, TRANSCEIVER_2.item(), null,
+                RECEIVER_2.item(), ELECTRIC_MOTOR.item(), null,
+                null, CARBON_STRUCTURE.item(), null
         }, INFUSION_PILLAR_SETTINGS).register(addon);
 
         new InfusionPillar(Groups.MACHINES, INDUSTRIAL_INFUSION_PILLAR, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                INFUSED_FREQUENCY_CRYSTAL, INFUSION_PILLAR, INFUSED_FREQUENCY_CRYSTAL,
-                RECEIVER_3, ELECTRIC_MOTOR, null,
-                INFUSED_FREQUENCY_CRYSTAL, INFUSION_PILLAR, INFUSED_FREQUENCY_CRYSTAL
+                INFUSED_FREQUENCY_CRYSTAL.item(), INFUSION_PILLAR.item(), INFUSED_FREQUENCY_CRYSTAL.item(),
+                RECEIVER_3.item(), ELECTRIC_MOTOR.item(), null,
+                INFUSED_FREQUENCY_CRYSTAL.item(), INFUSION_PILLAR.item(), INFUSED_FREQUENCY_CRYSTAL.item()
         }, INDUSTRIAL_INFUSION_PILLAR_SETTINGS).register(addon);
 
         new InfusionContainer(Groups.MACHINES, INFUSION_CONTAINER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, null, null,
-                CARBON_STRUCTURE, null, CARBON_STRUCTURE,
-                CARBON_STRUCTURE, POWER_CRYSTAL, CARBON_STRUCTURE
+                CARBON_STRUCTURE.item(), null, CARBON_STRUCTURE.item(),
+                CARBON_STRUCTURE.item(), POWER_CRYSTAL.item(), CARBON_STRUCTURE.item()
         }, INFUSION_CONTAINER_SETTINGS).register(addon);
 
         new IndustrialInfusionContainer(Groups.MACHINES, INDUSTRIAL_INFUSION_CONTAINER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                CARBON_STRUCTURE, INFUSION_CONTAINER, CARBON_STRUCTURE,
-                CARBON_STRUCTURE, ANDROID_MEMORY_CORE, CARBON_STRUCTURE,
-                CARBON_STRUCTURE, INFUSION_CONTAINER, CARBON_STRUCTURE
+                CARBON_STRUCTURE.item(), INFUSION_CONTAINER.item(), CARBON_STRUCTURE.item(),
+                CARBON_STRUCTURE.item(), ANDROID_MEMORY_CORE.item(), CARBON_STRUCTURE.item(),
+                CARBON_STRUCTURE.item(), INFUSION_CONTAINER.item(), CARBON_STRUCTURE.item()
         }, INDUSTRIAL_INFUSION_CONTAINER_SETTINGS).register(addon);
 
 
 
         new EntanglementMagnet(Groups.MACHINES, ENTANGLEMENT_MAGNET, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, ELECTRO_MAGNET, null,
-                RECEIVER_3, CARBON_STRUCTURE, null,
-                null, ELECTRO_MAGNET, null
+                null, ELECTRO_MAGNET.item(), null,
+                RECEIVER_3.item(), CARBON_STRUCTURE.item(), null,
+                null, ELECTRO_MAGNET.item(), null
         }, ENTANGLEMENT_MAGNET_SETTINGS).register(addon);
 
         new IndustrialEntanglementMagnet(Groups.MACHINES, INDUSTRIAL_ENTANGLEMENT_MAGNET, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                ELECTRO_MAGNET, ENTANGLED_FREQUENCY_CRYSTAL, ELECTRO_MAGNET,
-                RECEIVER_3, ENTANGLEMENT_MAGNET, null,
-                ELECTRO_MAGNET, ENTANGLED_FREQUENCY_CRYSTAL, ELECTRO_MAGNET
+                ELECTRO_MAGNET.item(), ENTANGLED_FREQUENCY_CRYSTAL.item(), ELECTRO_MAGNET.item(),
+                RECEIVER_3.item(), ENTANGLEMENT_MAGNET.item(), null,
+                ELECTRO_MAGNET.item(), ENTANGLED_FREQUENCY_CRYSTAL.item(), ELECTRO_MAGNET.item()
         }, INDUSTRIAL_ENTANGLEMENT_MAGNET_SETTINGS).register(addon);
 
         new EntanglementContainer(Groups.MACHINES, ENTANGLEMENT_CONTAINER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                CARBON_STRUCTURE, DIELECTRIC_3, CARBON_STRUCTURE,
-                DIELECTRIC_3, INFUSED_FREQUENCY_CRYSTAL, DIELECTRIC_3,
-                CARBON_STRUCTURE, DIELECTRIC_3, CARBON_STRUCTURE
+                CARBON_STRUCTURE.item(), DIELECTRIC_3.item(), CARBON_STRUCTURE.item(),
+                DIELECTRIC_3.item(), INFUSED_FREQUENCY_CRYSTAL.item(), DIELECTRIC_3.item(),
+                CARBON_STRUCTURE.item(), DIELECTRIC_3.item(), CARBON_STRUCTURE.item()
         }, ENTANGLEMENT_CONTAINER_SETTINGS).register(addon);
 
         new IndustrialEntanglementContainer(Groups.MACHINES, INDUSTRIAL_ENTANGLEMENT_CONTAINER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                CARBON_STRUCTURE, ENTANGLEMENT_CONTAINER, CARBON_STRUCTURE,
-                DIELECTRIC_4, ENTANGLED_FREQUENCY_CRYSTAL, DIELECTRIC_4,
-                CARBON_STRUCTURE, ENTANGLEMENT_CONTAINER, CARBON_STRUCTURE
+                CARBON_STRUCTURE.item(), ENTANGLEMENT_CONTAINER.item(), CARBON_STRUCTURE.item(),
+                DIELECTRIC_4.item(), ENTANGLED_FREQUENCY_CRYSTAL.item(), DIELECTRIC_4.item(),
+                CARBON_STRUCTURE.item(), ENTANGLEMENT_CONTAINER.item(), CARBON_STRUCTURE.item()
         }, INDUSTRIAL_ENTANGLEMENT_CONTAINER_SETTINGS).register(addon);
 
 

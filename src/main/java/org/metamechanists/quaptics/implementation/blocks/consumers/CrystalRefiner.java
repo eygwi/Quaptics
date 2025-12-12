@@ -184,16 +184,16 @@ public class CrystalRefiner extends ConnectedBlock implements ItemHolderBlock, P
     @Override
     public Map<ItemStack, ItemStack> getRecipes() {
         return Map.of(
-                new ItemStack(Material.QUARTZ), CraftingComponents.PHASE_CRYSTAL_1,
-                CraftingComponents.PHASE_CRYSTAL_1, CraftingComponents.PHASE_CRYSTAL_5,
-                CraftingComponents.PHASE_CRYSTAL_5, CraftingComponents.PHASE_CRYSTAL_15,
-                CraftingComponents.PHASE_CRYSTAL_15, CraftingComponents.PHASE_CRYSTAL_45,
-                CraftingComponents.PHASE_CRYSTAL_45, CraftingComponents.PHASE_CRYSTAL_90,
-                CraftingComponents.PHASE_CRYSTAL_90, CraftingComponents.PHASE_CRYSTAL_180
+                new ItemStack(Material.QUARTZ), CraftingComponents.PHASE_CRYSTAL_1.item(),
+                CraftingComponents.PHASE_CRYSTAL_1.item(), CraftingComponents.PHASE_CRYSTAL_5.item(),
+                CraftingComponents.PHASE_CRYSTAL_5.item(), CraftingComponents.PHASE_CRYSTAL_15.item(),
+                CraftingComponents.PHASE_CRYSTAL_15.item(), CraftingComponents.PHASE_CRYSTAL_45.item(),
+                CraftingComponents.PHASE_CRYSTAL_45.item(), CraftingComponents.PHASE_CRYSTAL_90.item(),
+                CraftingComponents.PHASE_CRYSTAL_90.item(), CraftingComponents.PHASE_CRYSTAL_180.item()
         );
     }
 
     private static void tickAnimation(@NotNull final Location location) {
-        location.getWorld().spawnParticle(Particle.BLOCK_DUST, location.toCenterLocation(), 4, 0, 0, 0, Material.QUARTZ_BLOCK.createBlockData());
+        location.getWorld().spawnParticle(Particle.BLOCK, location.toCenterLocation(), 4, 0, 0, 0, Material.QUARTZ_BLOCK.createBlockData());
     }
 }

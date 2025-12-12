@@ -57,10 +57,10 @@ public class InfusionContainer extends ConnectedBlock implements ItemHolderBlock
                     "&7● &eRight Click &7with an item to start infusing"));
 
     private static final Map<Vector, ItemStack> PILLARS = Map.of(
-            new Vector(2, 0, 0), INFUSION_PILLAR,
-            new Vector(-2, 0, 0), INFUSION_PILLAR,
-            new Vector(0, 0, 2), INFUSION_PILLAR,
-            new Vector(0, 0, -2), INFUSION_PILLAR);
+            new Vector(2, 0, 0), INFUSION_PILLAR.item(),
+            new Vector(-2, 0, 0), INFUSION_PILLAR.item(),
+            new Vector(0, 0, 2), INFUSION_PILLAR.item(),
+            new Vector(0, 0, -2), INFUSION_PILLAR.item());
 
     private static final int PILLAR_PARTICLE_COUNT = 3;
     private static final double PILLAR_PARTICLE_ANIMATION_LENGTH_SECONDS = 0.5;
@@ -186,8 +186,8 @@ public class InfusionContainer extends ConnectedBlock implements ItemHolderBlock
     @Override
     public Map<ItemStack, ItemStack> getRecipes() {
         return Map.of(
-                BLANK_MODULE_CARD, INFUSED_MODULE_CARD,
-                new ItemStack(Material.QUARTZ), INFUSED_FREQUENCY_CRYSTAL);
+                BLANK_MODULE_CARD.item(), INFUSED_MODULE_CARD.item(),
+                new ItemStack(Material.QUARTZ), INFUSED_FREQUENCY_CRYSTAL.item());
     }
     @Override
     public Map<Vector, ItemStack> getStructure() {
@@ -214,6 +214,6 @@ public class InfusionContainer extends ConnectedBlock implements ItemHolderBlock
                 0);
     }
     private static void animateCenter(@NotNull final Location center) {
-        ParticleUtils.randomParticle(center.clone().toCenterLocation(), Particle.ENCHANTMENT_TABLE, CONTAINER_PARTICLE_RADIUS, CONTAINER_PARTICLE_COUNT);
+        ParticleUtils.randomParticle(center.clone().toCenterLocation(), Particle.ENCHANT, CONTAINER_PARTICLE_RADIUS, CONTAINER_PARTICLE_COUNT);
     }
 }

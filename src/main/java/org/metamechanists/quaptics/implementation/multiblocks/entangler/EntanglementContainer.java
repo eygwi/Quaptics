@@ -56,12 +56,12 @@ public class EntanglementContainer extends ConnectedBlock implements ItemHolderB
                     "&7● &eRight Click &7with an item to start the entanglement process"));
 
     private static final Map<Vector, ItemStack> MAGNETS = Map.of(
-            new Vector(3, 0, 0), ENTANGLEMENT_MAGNET,
-            new Vector(-3, 0, 0), ENTANGLEMENT_MAGNET,
-            new Vector(0, 3, 0), ENTANGLEMENT_MAGNET,
-            new Vector(0, -3, 0), ENTANGLEMENT_MAGNET,
-            new Vector(0, 0, 3), ENTANGLEMENT_MAGNET,
-            new Vector(0, 0, -3), ENTANGLEMENT_MAGNET);
+            new Vector(3, 0, 0), ENTANGLEMENT_MAGNET.item(),
+            new Vector(-3, 0, 0), ENTANGLEMENT_MAGNET.item(),
+            new Vector(0, 3, 0), ENTANGLEMENT_MAGNET.item(),
+            new Vector(0, -3, 0), ENTANGLEMENT_MAGNET.item(),
+            new Vector(0, 0, 3), ENTANGLEMENT_MAGNET.item(),
+            new Vector(0, 0, -3), ENTANGLEMENT_MAGNET.item());
 
     private final double magnetParticleAnimationLengthSeconds = settings.getTimePerItem();
 
@@ -225,8 +225,8 @@ public class EntanglementContainer extends ConnectedBlock implements ItemHolderB
     @Override
     public Map<ItemStack, ItemStack> getRecipes() {
         return Map.of(
-                INFUSED_MODULE_CARD, ENTANGLED_MODULE_CARD,
-                INFUSED_FREQUENCY_CRYSTAL, ENTANGLED_FREQUENCY_CRYSTAL);
+                INFUSED_MODULE_CARD.item(), ENTANGLED_MODULE_CARD.item(),
+                INFUSED_FREQUENCY_CRYSTAL.item(), ENTANGLED_FREQUENCY_CRYSTAL.item());
     }
     @Override
     public Map<Vector, ItemStack> getStructure() {
@@ -253,7 +253,7 @@ public class EntanglementContainer extends ConnectedBlock implements ItemHolderB
                 0.05);
     }
     private static void animateCenterCompleted(@NotNull final Location center) {
-        new ParticleBuilder(Particle.FIREWORKS_SPARK)
+        new ParticleBuilder(Particle.FIREWORK)
                 .location(center.toCenterLocation())
                 .extra(0.1)
                 .count(50)

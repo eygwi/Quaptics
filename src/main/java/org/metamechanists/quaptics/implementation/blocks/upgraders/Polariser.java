@@ -62,12 +62,11 @@ public class Polariser extends ConnectedBlock implements PowerAnimatedBlock, Pow
     private static final Vector OUTPUT_LOCATION = new Vector(0.0F, 0.0F, 0.45);
 
     private static final Map<ItemStack, Integer> PHASE_CHANGES = Map.of(
-            CraftingComponents.PHASE_CRYSTAL_1, 1,
-            CraftingComponents.PHASE_CRYSTAL_5, 5,
-            CraftingComponents.PHASE_CRYSTAL_15, 15,
-            CraftingComponents.PHASE_CRYSTAL_45, 45,
-            CraftingComponents.PHASE_CRYSTAL_90, 90);
-
+            CraftingComponents.PHASE_CRYSTAL_1.item(), 1,
+            CraftingComponents.PHASE_CRYSTAL_5.item(), 5,
+            CraftingComponents.PHASE_CRYSTAL_15.item(), 15,
+            CraftingComponents.PHASE_CRYSTAL_45.item(), 45,
+            CraftingComponents.PHASE_CRYSTAL_90.item(), 90);
     public Polariser(final ItemGroup itemGroup, final SlimefunItemStack item, final RecipeType recipeType, final ItemStack[] recipe, final Settings settings) {
         super(itemGroup, item, recipeType, recipe, settings);
     }

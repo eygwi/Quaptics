@@ -2,7 +2,7 @@ package org.metamechanists.quaptics.items;
 
 import dev.sefiraat.sefilib.slimefun.itemgroup.DummyItemGroup;
 import dev.sefiraat.sefilib.slimefun.itemgroup.SimpleFlexGroup;
-import io.github.bakedlibs.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
@@ -37,33 +37,33 @@ public class Groups {
             Quaptics.getInstance(),
             Colors.QUAPTICS.getFormattedColor() + "Quaptics",
             Keys.MAIN,
-            new CustomItemStack(Material.LIGHT_BLUE_STAINED_GLASS, Colors.QUAPTICS.getFormattedColor() + "Quaptics"));
+            CustomItemStack.create(Material.LIGHT_BLUE_STAINED_GLASS, Colors.QUAPTICS.getFormattedColor() + "Quaptics"));
 
     public final ItemGroup GUIDE = new DummyItemGroup(Keys.GUIDE,
-            new CustomItemStack(Material.MAP, "&aGuide"));
+            CustomItemStack.create(Material.MAP, "&aGuide"));
 
     public final ItemGroup CRAFTING_COMPONENTS = new DummyItemGroup(Keys.TOOLS,
-            new CustomItemStack(Material.CLOCK, "&3Crafting Components"));
+            CustomItemStack.create(Material.CLOCK, "&3Crafting Components"));
 
     public final ItemGroup TOOLS = new DummyItemGroup(Keys.TOOLS,
-            new CustomItemStack(Material.DIAMOND_HORSE_ARMOR, "&9Tools"));
+            CustomItemStack.create(Material.DIAMOND_HORSE_ARMOR, "&9Tools"));
 
     public final ItemGroup BEAM_CREATION = new DummyItemGroup(Keys.BEAM_CREATION,
-            new CustomItemStack(Material.GLASS_PANE, Colors.QUAPTIC_COMPONENTS.getFormattedColor() + "Beam Creation"));
+            CustomItemStack.create(Material.GLASS_PANE, Colors.QUAPTIC_COMPONENTS.getFormattedColor() + "Beam Creation"));
     public final ItemGroup BEAM_MANIPULATION = new DummyItemGroup(Keys.BEAM_MANIPULATION,
-            new CustomItemStack(Material.WHITE_STAINED_GLASS, Colors.QUAPTIC_COMPONENTS.getFormattedColor() + "Beam Manipulation"));
+            CustomItemStack.create(Material.WHITE_STAINED_GLASS, Colors.QUAPTIC_COMPONENTS.getFormattedColor() + "Beam Manipulation"));
     public final ItemGroup FREQUENCY_AND_PHASE = new DummyItemGroup(Keys.FREQUENCY_AND_PHASE,
-            new CustomItemStack(Material.RED_STAINED_GLASS, Colors.QUAPTIC_COMPONENTS.getFormattedColor() + "Frequency & Phase"));
+            CustomItemStack.create(Material.RED_STAINED_GLASS, Colors.QUAPTIC_COMPONENTS.getFormattedColor() + "Frequency & Phase"));
     public final ItemGroup MACHINES = new DummyItemGroup(Keys.MACHINES,
-            new CustomItemStack(Material.DISPENSER, Colors.QUAPTIC_COMPONENTS.getFormattedColor() + "Machines"));
+            CustomItemStack.create(Material.DISPENSER, Colors.QUAPTIC_COMPONENTS.getFormattedColor() + "Machines"));
 
     public final ItemGroup BEACON_COMPONENTS = new DummyItemGroup(Keys.BEACON_COMPONENTS,
-            new CustomItemStack(Material.DEEPSLATE_BRICK_WALL, Colors.BEACONS.getFormattedColor() + "Beacon Components"));
+            CustomItemStack.create(Material.DEEPSLATE_BRICK_WALL, Colors.BEACONS.getFormattedColor() + "Beacon Components"));
     public final ItemGroup BEACON_MODULES = new DummyItemGroup(Keys.BEACON_MODULES,
-            new CustomItemStack(BeaconController.emptyItemStack(), Colors.BEACONS.getFormattedColor() + "Beacon Modules"));
+            CustomItemStack.create(BeaconController.emptyItemStack(), Colors.BEACONS.getFormattedColor() + "Beacon Modules"));
 
     public final ItemGroup TESTING = new DummyItemGroup(Keys.TESTING,
-            new CustomItemStack(Material.GRAY_CONCRETE, "&8Testing"));
+            CustomItemStack.create(Material.GRAY_CONCRETE, "&8Testing"));
 
     public void initialize() {
         final SlimefunAddon addon = Quaptics.getInstance();

@@ -20,8 +20,8 @@ public class RecipeTypes {
         private RecipeInfusion() {
             super(
                     Keys.RECIPE_INFUSION_CONTAINER,
-                    new CustomItemStack(
-                            INFUSION_CONTAINER.clone(),
+                    CustomItemStack.create(
+                            INFUSION_CONTAINER.clone().item(),
                             Colors.QUAPTICS.getFormattedColor() + "Infusion",
                             "&7Made in the Infuser multiblock")
             );
@@ -32,8 +32,8 @@ public class RecipeTypes {
         private RecipeEntanglement() {
             super(
                     Keys.RECIPE_ENTANGLER,
-                    new CustomItemStack(
-                            ENTANGLEMENT_CONTAINER.clone(),
+                    CustomItemStack.create(
+                            ENTANGLEMENT_CONTAINER.clone().item(),
                             Colors.QUAPTICS.getFormattedColor() + "Entanglement",
                             "&7Made in the Entangler multiblock")
             );
@@ -44,8 +44,8 @@ public class RecipeTypes {
         private RecipeRefining() {
             super(
                     Keys.RECIPE_CRYSTAL_REFINER,
-                    new CustomItemStack(
-                            CRYSTAL_REFINER.clone(),
+                    CustomItemStack.create(
+                            CRYSTAL_REFINER.clone().item(),
                             Colors.QUAPTICS.getFormattedColor() + "Crystal Refining",
                             "&7Made in the Crystal Refiner")
             );
